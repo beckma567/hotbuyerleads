@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HotBuyerLeads | Exclusive Buyer Leads for Realtors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E85A2B;
+            --secondary: #1A1A2E;
+            --accent: #00D4AA;
+            --bg-dark: #0F0F1A;
+            --bg-card: #16162A;
+            --text-light: #FFFFFF;
+            --text-gray: #A0A0B0;
+            --gradient-1: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Logo */
+        .logo-mark {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            background: var(--gradient-1);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 900;
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-top {
+            font-size: 0.95rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 0.03em;
+            line-height: 1.1;
+        }
+        
+        .logo-bottom {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--primary);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 50%, #0F0F1A 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* 3-Part Headline Structure */
+        .hero-eyebrow {
+            display: inline-block;
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--primary);
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        
+        .hero-headline {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 24px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero-mechanism {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        
+        .hero-outcome {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        /* Proof Line */
+        .hero-proof {
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 40px;
+        }
+        
+        .proof-stat {
+            font-weight: 700;
+            color: var(--text-light);
+        }
+        
+        /* CTA */
+        .hero-cta {
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: var(--gradient-1);
+            color: white;
+            padding: 20px 48px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
+        }
+        
+        .cta-micro {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-top: 16px;
+        }
+        
+        /* Reassurance */
+        .hero-reassurance {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            flex-wrap: wrap;
+        }
+        
+        .hero-reassurance span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Coming Soon Banner */
+        .coming-soon {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            max-width: 600px;
+            margin: 60px auto 0;
+        }
+        
+        .coming-soon h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+        
+        .coming-soon p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 140px 0 80px;
+            }
+            
+            .hero-headline {
+                font-size: 2rem;
+            }
+            
+            .hero-mechanism {
+                font-size: 1.2rem;
+            }
+            
+            .hero-reassurance {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo-mark">
+                    <div class="logo-icon">HB</div>
+                    <div class="logo-text">
+                        <span class="logo-top">HOTBUYERLEADS</span>
+                        <span class="logo-bottom">Exclusive Buyer Leads for Realtors</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Eyebrow -->
+            <div class="hero-eyebrow">🏆 Trusted by 50+ Top Producing Agents</div>
+            
+            <!-- 3-Part Headline -->
+            <h1 class="hero-headline">Your Cold Calling Is Killing Your Business</h1>
+            
+            <p class="hero-mechanism">
+                We deliver 20-30 pre-qualified home buyer leads to your inbox every month — 
+                buyers who are actively searching, pre-approved, and ready to purchase in the next 90 days.
+            </p>
+            
+            <p class="hero-outcome">
+                So you can spend your time showing houses and closing deals while your 
+                competitors waste hours chasing dead-end prospects.
+            </p>
+            
+            <!-- Proof Line -->
+            <div class="hero-proof">
+                <span class="proof-stat">847 buyer leads</span> delivered last month • 
+                <span class="proof-stat">$4.2M in sales</span> closed by our agents • 
+                <span class="proof-stat">94% lead accuracy</span>
+            </div>
+            
+            <!-- CTA -->
+            <div class="hero-cta">
+                <a href="#pricing" class="btn-primary">GET EXCLUSIVE BUYER LEADS →</a>
+                <p class="cta-micro">No contracts. Cancel anytime. Exclusive territory protection.</p>
+            </div>
+            
+            <!-- Reassurance -->
+            <div class="hero-reassurance">
+                <span>⚡ 20-30 Fresh Leads Monthly</span>
+                <span>🎯 Pre-Qualified & Ready to Buy</span>
+                <span>🔒 Exclusive ZIP Code Territory</span>
+            </div>
+            
+            <!-- Coming Soon -->
+            <div class="coming-soon">
+                <h3>🚀 Full Sales Page Coming Soon</h3>
+                <p>We're building the complete HotBuyerLeads experience. Check back tomorrow for pricing, testimonials, and full service details. Or contact us now to secure your exclusive territory.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
