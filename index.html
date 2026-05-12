@@ -72,12 +72,12 @@
         
         /* Header */
         header {
-            padding: 20px 0;
+            padding: 15px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            background: rgba(10,10,10,0.9);
+            background: rgba(10,10,10,0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255,69,0,0.2);
         }
@@ -102,8 +102,12 @@
         }
         
         .logo img {
-            height: 50px;
+            height: 45px;
+            width: auto;
+            max-width: 200px;
+            object-fit: contain;
             filter: drop-shadow(0 0 20px rgba(255,69,0,0.5));
+            border-radius: 8px;
         }
         
         .nav-links {
@@ -158,7 +162,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 120px 0 80px;
+            padding: 140px 0 80px;
             position: relative;
         }
         
@@ -196,13 +200,15 @@
         
         .hero h1 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 80px;
-            line-height: 0.95;
+            font-size: 72px;
+            line-height: 1;
             margin-bottom: 25px;
             background: linear-gradient(135deg, #fff 0%, #ff6b35 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         
         .hero h1 span {
@@ -359,8 +365,11 @@
         .section-title {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 64px;
-            line-height: 1;
+            line-height: 1.1;
             margin-bottom: 30px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
         }
         
         .problem-grid {
@@ -905,11 +914,13 @@
         
         .urgency h2 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 72px;
+            font-size: 64px;
             margin-bottom: 20px;
             background: linear-gradient(135deg, #fff, var(--fire-orange));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         
         .urgency > p {
@@ -966,9 +977,11 @@
         
         .final-cta h2 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 96px;
-            line-height: 0.9;
+            font-size: 84px;
+            line-height: 1;
             margin-bottom: 30px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         
         .final-cta h2 span {
@@ -1054,12 +1067,42 @@
         }
         
         @media (max-width: 768px) {
+            header {
+                padding: 10px 0;
+            }
+            
+            .logo img {
+                height: 35px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
             .hero h1 {
-                font-size: 48px;
+                font-size: 42px;
+                line-height: 1.1;
             }
             
             .section-title {
-                font-size: 42px;
+                font-size: 36px;
+                line-height: 1.1;
+            }
+            
+            .urgency h2 {
+                font-size: 40px;
+            }
+            
+            .final-cta h2 {
+                font-size: 48px;
             }
             
             .problem-grid {
