@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HotBuyerLeads | Exclusive Buyer Leads for Realtors</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,305 +11,948 @@
             box-sizing: border-box;
         }
         
-        :root {
-            --primary: #FF6B35;
-            --primary-dark: #E85A2B;
-            --secondary: #1A1A2E;
-            --accent: #00D4AA;
-            --bg-dark: #0F0F1A;
-            --bg-card: #16162A;
-            --text-light: #FFFFFF;
-            --text-gray: #A0A0B0;
-            --gradient-1: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
-        }
-        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-light);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 0;
-            background: rgba(15, 15, 26, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #333;
+            background: #fff;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
         
-        .nav-content {
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
-        /* Logo */
-        .logo-mark {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
             text-decoration: none;
+            color: white;
         }
         
-        .logo-icon {
-            background: var(--gradient-1);
-            color: #fff;
-            font-size: 1.1rem;
-            font-weight: 900;
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
+        .logo span {
+            background: #ff6b6b;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 5px;
         }
         
-        .logo-text {
-            display: flex;
-            flex-direction: column;
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
         }
         
-        .logo-top {
-            font-size: 0.95rem;
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: 0.03em;
-            line-height: 1.1;
-        }
-        
-        .logo-bottom {
-            font-size: 0.65rem;
-            font-weight: 600;
-            color: var(--primary);
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
+        nav a:hover {
+            text-decoration: underline;
         }
         
         /* Hero Section */
         .hero {
-            padding: 160px 0 100px;
-            text-align: center;
-            background: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 50%, #0F0F1A 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-        
-        /* 3-Part Headline Structure */
-        .hero-eyebrow {
-            display: inline-block;
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid rgba(255, 107, 53, 0.3);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            color: var(--primary);
-            margin-bottom: 24px;
-            font-weight: 600;
-        }
-        
-        .hero-headline {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 900;
-            color: var(--primary);
-            margin-bottom: 24px;
-            line-height: 1.1;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-        }
-        
-        .hero-mechanism {
-            font-size: 1.5rem;
-            color: var(--text-light);
-            max-width: 800px;
-            margin: 0 auto 20px;
-            line-height: 1.5;
-            font-weight: 500;
-        }
-        
-        .hero-outcome {
-            font-size: 1.25rem;
-            color: var(--text-gray);
-            max-width: 700px;
-            margin: 0 auto 40px;
-            line-height: 1.6;
-        }
-        
-        /* Proof Line */
-        .hero-proof {
-            font-size: 1rem;
-            color: var(--accent);
-            margin-bottom: 40px;
-        }
-        
-        .proof-stat {
-            font-weight: 700;
-            color: var(--text-light);
-        }
-        
-        /* CTA */
-        .hero-cta {
-            margin-bottom: 20px;
-        }
-        
-        .btn-primary {
-            display: inline-block;
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 20px 48px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
+            padding: 80px 0;
+            text-align: center;
         }
         
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.4);
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-bottom: 30px;
         }
         
-        .cta-micro {
-            font-size: 0.9rem;
-            color: var(--text-gray);
-            margin-top: 16px;
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
         
-        /* Reassurance */
-        .hero-reassurance {
+        .hero-subtitle {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-supporting {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .stats-bar {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: var(--text-gray);
+            gap: 40px;
+            margin-bottom: 40px;
             flex-wrap: wrap;
         }
         
-        .hero-reassurance span {
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+        }
+        
+        .trust-line {
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .benefits-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .benefit-item {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            font-size: 16px;
         }
         
-        /* Coming Soon Banner */
-        .coming-soon {
-            background: var(--bg-card);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 24px;
+        /* Problem Section */
+        .problem {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+        
+        .problem-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .problem-intro {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #444;
+        }
+        
+        .problem-list {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .problem-list h3 {
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .problem-list ul {
+            list-style: none;
+        }
+        
+        .problem-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .problem-result {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ff6b6b;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 80px 0;
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .solution-card .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .solution-card h3 {
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border: 2px solid #eee;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .pricing-card.popular {
+            border-color: #667eea;
+            position: relative;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .price span {
+            font-size: 16px;
+            color: #666;
+            font-weight: normal;
+        }
+        
+        .pricing-description {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-features li:before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .guarantee-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .guarantee-box h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card blockquote {
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .testimonial-result {
+            color: #667eea;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .results-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .results-banner h3 {
+            margin-bottom: 20px;
+        }
+        
+        .results-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 50px auto 0;
+        }
+        
+        .faq-item {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            color: #666;
+        }
+        
+        /* Urgency Section */
+        .urgency {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .urgency h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .territory-list {
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 30px auto;
+            text-align: left;
+        }
+        
+        .territory-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .territory-item:last-child {
+            border-bottom: none;
+        }
+        
+        .available {
+            color: #90ee90;
+        }
+        
+        .claimed {
+            color: #ffcccb;
+            text-decoration: line-through;
+        }
+        
+        .last-updated {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 0;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 18px;
             max-width: 600px;
-            margin: 60px auto 0;
+            margin: 0 auto 40px;
+            opacity: 0.9;
         }
         
-        .coming-soon h3 {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            color: var(--text-light);
+        /* Footer */
+        footer {
+            background: #222;
+            color: #999;
+            padding: 40px 0;
+            text-align: center;
         }
         
-        .coming-soon p {
-            font-size: 0.9rem;
-            color: var(--text-gray);
+        .footer-links {
+            margin-bottom: 20px;
         }
         
-        /* Mobile Responsive */
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        /* Responsive */
         @media (max-width: 768px) {
-            .hero {
-                padding: 140px 0 80px;
+            .hero h1 {
+                font-size: 32px;
             }
             
-            .hero-headline {
-                font-size: 2rem;
-            }
-            
-            .hero-mechanism {
-                font-size: 1.2rem;
-            }
-            
-            .hero-reassurance {
+            .stats-bar {
                 flex-direction: column;
-                gap: 16px;
+                gap: 20px;
+            }
+            
+            .benefits-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
+    <!-- Header -->
+    <header>
         <div class="container">
-            <div class="nav-content">
-                <a href="/" class="logo-mark">
-                    <div class="logo-icon">HB</div>
-                    <div class="logo-text">
-                        <span class="logo-top">HOTBUYERLEADS</span>
-                        <span class="logo-bottom">Exclusive Buyer Leads for Realtors</span>
-                    </div>
-                </a>
+            <div class="header-content">
+                <a href="#" class="logo">HB <span>HOTBUYERLEADS</span></a>
+                <nav>
+                    <a href="#problem">The Problem</a>
+                    <a href="#solution">Solution</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <!-- Eyebrow -->
-            <div class="hero-eyebrow">🏆 Trusted by 50+ Top Producing Agents</div>
+            <div class="hero-badge">🏆 Trusted by 50+ Top Producing Agents</div>
+            <h1>Your Cold Calling Is Killing Your Business</h1>
+            <p class="hero-subtitle">We deliver 20-30 pre-qualified home buyer leads to your inbox every month — buyers who are actively searching, pre-approved, and ready to purchase in the next 90 days.</p>
+            <p class="hero-supporting">So you can spend your time showing houses and closing deals while your competitors waste hours chasing dead-end prospects.</p>
             
-            <!-- 3-Part Headline -->
-            <h1 class="hero-headline">Your Cold Calling Is Killing Your Business</h1>
-            
-            <p class="hero-mechanism">
-                We deliver 20-30 pre-qualified home buyer leads to your inbox every month — 
-                buyers who are actively searching, pre-approved, and ready to purchase in the next 90 days.
-            </p>
-            
-            <p class="hero-outcome">
-                So you can spend your time showing houses and closing deals while your 
-                competitors waste hours chasing dead-end prospects.
-            </p>
-            
-            <!-- Proof Line -->
-            <div class="hero-proof">
-                <span class="proof-stat">847 buyer leads</span> delivered last month • 
-                <span class="proof-stat">$4.2M in sales</span> closed by our agents • 
-                <span class="proof-stat">94% lead accuracy</span>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">847</span>
+                    <span class="stat-label">leads delivered last month</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">$4.2M</span>
+                    <span class="stat-label">in sales closed by our agents</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">94%</span>
+                    <span class="stat-label">lead accuracy</span>
+                </div>
             </div>
             
-            <!-- CTA -->
-            <div class="hero-cta">
-                <a href="#pricing" class="btn-primary">GET EXCLUSIVE BUYER LEADS →</a>
-                <p class="cta-micro">No contracts. Cancel anytime. Exclusive territory protection.</p>
-            </div>
+            <a href="#pricing" class="cta-button">GET EXCLUSIVE BUYER LEADS →</a>
+            <p class="trust-line">No contracts. Cancel anytime. Exclusive territory protection.</p>
             
-            <!-- Reassurance -->
-            <div class="hero-reassurance">
-                <span>⚡ 20-30 Fresh Leads Monthly</span>
-                <span>🎯 Pre-Qualified & Ready to Buy</span>
-                <span>🔒 Exclusive ZIP Code Territory</span>
-            </div>
-            
-            <!-- Coming Soon -->
-            <div class="coming-soon">
-                <h3>🚀 Full Sales Page Coming Soon</h3>
-                <p>We're building the complete HotBuyerLeads experience. Check back tomorrow for pricing, testimonials, and full service details. Or contact us now to secure your exclusive territory.</p>
+            <div class="benefits-row">
+                <div class="benefit-item">⚡ 20-30 Fresh Leads Monthly</div>
+                <div class="benefit-item">🎯 Pre-Qualified & Ready to Buy</div>
+                <div class="benefit-item">🔒 Exclusive ZIP Code Territory</div>
             </div>
         </div>
     </section>
+
+    <!-- Problem Section -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <h2 class="section-title">The Brutal Truth About Real Estate Lead Generation</h2>
+            <div class="problem-content">
+                <p class="problem-intro">You're spending 20+ hours a week cold calling, door knocking, and chasing prospects who aren't even qualified. Meanwhile, top-producing agents in your market are closing 3-5 deals a month from leads that come TO them.</p>
+                
+                <div class="problem-list">
+                    <h3>The Old Way:</h3>
+                    <ul>
+                        <li>❌ Cold calling expireds and FSBOs</li>
+                        <li>❌ Buying shared leads from Zillow (competing with 5+ agents)</li>
+                        <li>❌ Wasting weekends at open houses with looky-loos</li>
+                        <li>❌ Spending $2,000+/month on ads with no guarantee</li>
+                    </ul>
+                </div>
+                
+                <p class="problem-result">The Result: Burnout, inconsistent income, and watching other agents take the deals you should be closing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution" id="solution">
+        <div class="container">
+            <h2 class="section-title">Imagine Starting Each Month With 20-30 Pre-Qualified Buyers</h2>
+            <p class="section-subtitle">HotBuyerLeads delivers exclusive, high-intent buyer leads directly to your inbox. These aren't shared leads. They're not tire-kickers. They're serious buyers who have been pre-screened, pre-approved, and are actively searching for homes in YOUR territory.</p>
+            
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="icon">🔒</div>
+                    <h3>Exclusive Territory</h3>
+                    <p>One agent per ZIP code. No competing with other agents for the same lead.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">✅</div>
+                    <h3>Pre-Qualified Buyers</h3>
+                    <p>Every lead has verified income, pre-approval letter, and realistic budget.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">⚡</div>
+                    <h3>Ready to Buy NOW</h3>
+                    <p>90-day purchase timeline. These buyers are motivated and urgent.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">📅</div>
+                    <h3>Fresh Weekly Delivery</h3>
+                    <p>New leads every week, not stale lists sold to dozens of agents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Get Your First Leads in 7 Days (3 Simple Steps)</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Claim Your Territory</h3>
+                    <p>Enter your desired ZIP code. If it's available, it's yours exclusively. No other agent in our network will receive leads for that area.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Generate & Qualify</h3>
+                    <p>Our proprietary system identifies active buyers in your territory. We verify their pre-approval status, budget, and timeline before they ever reach your inbox.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Receive & Close</h3>
+                    <p>Fresh leads delivered to your email every Monday morning. Each lead includes full contact details, budget, and buying criteria. You call, they answer, you close.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing. No Contracts. Cancel Anytime.</h2>
+            <p class="section-subtitle">Choose the plan that fits your goals. All plans include exclusive territory protection.</p>
+            
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <h3>STARTER PLAN</h3>
+                    <div class="price">$497<span>/month</span></div>
+                    <p class="pricing-description">Perfect for agents closing 1-2 deals per quarter</p>
+                    <ul class="pricing-features">
+                        <li>10-12 exclusive buyer leads/month</li>
+                        <li>1 ZIP code territory</li>
+                        <li>Weekly lead delivery (Mondays)</li>
+                        <li>Basic lead details</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#" class="cta-button">GET STARTED →</a>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">⭐ MOST POPULAR</div>
+                    <h3>PROFESSIONAL PLAN</h3>
+                    <div class="price">$997<span>/month</span></div>
+                    <p class="pricing-description">For agents ready to scale to 3-5 closings per month</p>
+                    <ul class="pricing-features">
+                        <li>20-30 exclusive buyer leads/month</li>
+                        <li>2 ZIP code territories</li>
+                        <li>Weekly lead delivery (Mondays)</li>
+                        <li>Full lead details + buyer profile</li>
+                        <li>Priority email & phone support</li>
+                        <li>Monthly performance review call</li>
+                        <li><strong>BONUS:</strong> Scripts & objection handlers guide</li>
+                    </ul>
+                    <a href="#" class="cta-button">GET STARTED →</a>
+                </div>
+                
+                <!-- Elite Plan -->
+                <div class="pricing-card">
+                    <h3>ELITE PLAN</h3>
+                    <div class="price">$1,997<span>/month</span></div>
+                    <p class="pricing-description">For top producers wanting to dominate their market</p>
+                    <ul class="pricing-features">
+                        <li>40-50 exclusive buyer leads/month</li>
+                        <li>3 ZIP code territories</li>
+                        <li>Twice-weekly lead delivery</li>
+                        <li>Full lead details + detailed buyer profile</li>
+                        <li>VIP phone & text support</li>
+                        <li>Bi-weekly strategy calls</li>
+                        <li><strong>BONUS:</strong> Scripts & objection handlers</li>
+                        <li><strong>BONUS:</strong> CRM integration setup</li>
+                        <li><strong>BONUS:</strong> Custom landing page</li>
+                    </ul>
+                    <a href="#" class="cta-button">GET STARTED →</a>
+                </div>
+            </div>
+            
+            <div class="guarantee-box">
+                <h3>🛡️ 30-Day Money-Back Guarantee</h3>
+                <p>If you don't receive the promised number of qualified leads in your first 30 days, we'll refund every penny. No questions asked.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Top-Producing Agents Are Saying</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <blockquote>"I was skeptical at first. I'd tried Zillow leads, Realtor.com, Facebook ads — nothing worked consistently. With HotBuyerLeads, I closed 3 deals in my first 60 days. The leads are actually qualified and they answer when I call."</blockquote>
+                    <div class="testimonial-author">— Jennifer M., Phoenix, AZ</div>
+                    <div class="testimonial-result">Closed $1.2M in sales first quarter</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <blockquote>"The exclusive territory is everything. I'm not competing with 5 other agents for the same lead. When I call, I'm the only agent they're talking to. My conversion rate went from 8% to 35%."</blockquote>
+                    <div class="testimonial-author">— Marcus T., Austin, TX</div>
+                    <div class="testimonial-result">6 closings in 90 days</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <blockquote>"I was spending $3,000/month on Zillow and getting maybe 2 closings a quarter. I switched to HotBuyerLeads, cut my lead spend in half, and I'm now closing 3-4 deals every month. The ROI is insane."</blockquote>
+                    <div class="testimonial-author">— Sarah K., Denver, CO</div>
+                    <div class="testimonial-result">Top 5% producer in her brokerage</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <blockquote>"These aren't just names and numbers. These are actual buyers with pre-approval letters who want to see houses THIS WEEK. My first lead turned into a $485K closing in 23 days."</blockquote>
+                    <div class="testimonial-author">— David R., Miami, FL</div>
+                    <div class="testimonial-result">New agent, now on track for $150K+ year</div>
+                </div>
+            </div>
+            
+            <div class="results-banner">
+                <h3>📊 Agent Results Last Month</h3>
+                <div class="results-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">847</span>
+                        <span class="stat-label">exclusive leads delivered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">$4.2M</span>
+                        <span class="stat-label">in real estate sales closed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">94%</span>
+                        <span class="stat-label">lead accuracy rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">28</span>
+                        <span class="stat-label">average days to close</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">How are these leads different from Zillow or Realtor.com? ▼</div>
+                    <div class="faq-answer">Zillow and Realtor.com sell the SAME lead to 3-8 agents simultaneously. You're in a race to the bottom on price and speed. HotBuyerLeads are EXCLUSIVE — one agent per ZIP code. When you call, you're the only agent they're talking to.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What makes a lead "pre-qualified"? ▼</div>
+                    <div class="faq-answer">Every lead we deliver has verified their income range, provided proof of pre-approval (or pre-qualification) from a lender, confirmed their realistic budget, and stated their 90-day purchase timeline. We filter out looky-loos, unqualified buyers, and people "just browsing."</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How quickly do I need to contact the leads? ▼</div>
+                    <div class="faq-answer">Speed matters. We recommend calling within 5 minutes of receiving your weekly delivery. Our data shows agents who call within the first hour have a 65% higher conversion rate than those who wait 24+ hours.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What if my territory isn't available? ▼</div>
+                    <div class="faq-answer">Territories are assigned on a first-come, first-served basis. If your desired ZIP code is taken, we'll show you adjacent available territories or add you to the waitlist. Most agents find an available territory within 10 miles of their target area.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can I change my ZIP code later? ▼</div>
+                    <div class="faq-answer">Yes. You can request a territory change once per quarter. If your new ZIP is available, we'll transfer your account. If it's taken, you can join the waitlist for that specific area.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What if I don't close any deals? ▼</div>
+                    <div class="faq-answer">While we can't guarantee closings (that depends on your follow-up and sales skills), we DO guarantee lead quality and quantity. If you don't receive the promised number of qualified leads in 30 days, we'll refund 100% of your money. No questions asked.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How long does it take to get my first leads? ▼</div>
+                    <div class="faq-answer">Most agents receive their first batch of leads within 5-7 business days of signing up. Lead delivery happens every Monday morning by 9 AM your local time.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do I need a CRM? ▼</div>
+                    <div class="faq-answer">While not required, we strongly recommend using a CRM to track your leads. We provide simple import instructions for popular CRMs like Follow Up Boss, LionDesk, kvCORE, and Salesforce. Elite plan members get complimentary CRM setup assistance.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Is there a contract or minimum commitment? ▼</div>
+                    <div class="faq-answer">No contracts. No minimums. Cancel anytime with 7 days notice. We earn your business every month by delivering quality leads.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What information comes with each lead? ▼</div>
+                    <div class="faq-answer">Every lead includes: Full name, phone number, email address, verified budget range, pre-approval status, preferred neighborhoods/areas, must-have features, timeline to purchase, and current living situation.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency">
+        <div class="container">
+            <h2>🚨 Only 3 Territories Left in Your Market</h2>
+            <p>We limit each metro area to ensure lead quality and agent success. Once a ZIP code is claimed, it's locked for 12 months minimum.</p>
+            
+            <div class="territory-list">
+                <div class="territory-item available">✅ 85018 (Phoenix, AZ) — AVAILABLE</div>
+                <div class="territory-item claimed">❌ 85016 — CLAIMED</div>
+                <div class="territory-item claimed">❌ 85020 — CLAIMED</div>
+                <div class="territory-item available">✅ 85022 — AVAILABLE</div>
+                <div class="territory-item available">✅ 85028 — AVAILABLE</div>
+            </div>
+            
+            <a href="#pricing" class="cta-button">CLAIM YOUR TERRITORY BEFORE IT'S GONE →</a>
+            <p class="last-updated">Last updated: Today at 2:47 PM MST</p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Stop Chasing. Start Closing.</h2>
+            <p>Every day you spend cold calling is a day you're NOT closing deals. While you're dialing expired listings, another agent is showing houses to YOUR buyer.</p>
+            <p>Join 50+ top-producing agents who've already made the switch.</p>
+            <a href="#pricing" class="cta-button">GET MY EXCLUSIVE BUYER LEADS →</a>
+            <p class="trust-line">30-day money-back guarantee • No contracts • Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Agent Login</a>
+            </div>
+            <p>support@hotbuyerleads.com | (555) 123-LEAD</p>
+            <p>&copy; 2026 HotBuyerLeads. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
